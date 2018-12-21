@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { LaLigaContext } from '../LaLiga';
 
 class Equipo extends Component {
+
     render() {
         return (
             <LaLigaContext.Consumer>
@@ -12,6 +13,13 @@ class Equipo extends Component {
                                 {equipo.nombre}
                                 <span className="badge badge-danger ml-4">{equipo.titulos}</span>
                             </p>
+                            <button
+                                className="btn btn-success"
+                                onClick={() => {
+                                    context.esCampeon(index);
+                                }}
+                            >Es campeón
+                            </button>
                         </li>
                     ))
                 )}
