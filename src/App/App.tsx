@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Equipos } from './Components';
+import LaLigaProvider from './Components/LaLiga';
 
 class App extends Component {
+
+
+
     public render() {
         return (
-            <h1>React TypeScript</h1>
+            <div className="container">
+                <LaLigaProvider>
+
+                    <Equipos />
+
+                </LaLigaProvider>
+            </div>
         );
     }
 }
